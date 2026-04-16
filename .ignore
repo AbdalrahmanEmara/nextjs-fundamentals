@@ -1,12 +1,12 @@
 # Node dependencies
 node_modules/
 
-# Next.js and build output
+# Next.js build output
 .next/
 out/
-dist/
+.dist/
 
-# Cached files and local build metadata
+# Build and cache artifacts
 .cache/
 build/
 coverage/
@@ -16,6 +16,10 @@ coverage/
 # Environment and secrets
 .env
 .env.*
+.env.local
+.env.local.*
+.env.production
+.env.production.*
 
 # Logs
 npm-debug.log*
@@ -46,5 +50,11 @@ Thumbs.db
 # Docker and container artifacts
 docker-compose.override.yml
 
-# Misc
+# Build/deploy metadata
 .vercel/
+.next/cache/
+
+# Optional tooling
+*.log
+*.pid
+*.seed

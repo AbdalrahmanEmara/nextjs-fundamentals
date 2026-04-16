@@ -1,1 +1,33 @@
-node_modules
+# Node dependencies
+node_modules/
+
+# Next.js build output and caches
+.next/
+out/
+dist/
+
+# Environment and secret files
+.env
+.env.*
+.env.local
+.env.production
+
+# Build and tooling caches
+.cache/
+build/
+coverage/
+
+# Vercel deployment files
+.vercel/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log
+
+# Swap files
+*.swp
+*.swo
