@@ -20,7 +20,7 @@ However, this caching introduces a new challenge. When we create a new issue and
 /app/lib/dal.ts
 
 ```ts
-import { unstable_cacheTag as cacheTag } from 'next/cache'
+import { cacheTag } from 'next/cache'
 
 const getIssues = async () => {
   'use cache'
