@@ -68,7 +68,7 @@ export async function createIssue(data: IssueData): Promise<ActionResponse> {
       userId: validatedData.userId,
     })
 
-    revalidateTag('issues')
+    revalidateTag('issues', 'cache')
 
     return { success: true, message: 'Issue created successfully' }
   } catch (error) {

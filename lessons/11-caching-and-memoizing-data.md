@@ -38,7 +38,7 @@ import { revalidateTag } from 'next/cache'
 
 export const createIssue = async () => {
   // after issue db insert
-  revalidateTag('issues')
+  revalidateTag('issues', 'cache')
 }
 ```
 
