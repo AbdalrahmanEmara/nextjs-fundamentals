@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/db'
 import { issues } from '@/db/schema'
 import { eq } from 'drizzle-orm'
@@ -6,11 +6,11 @@ import { eq } from 'drizzle-orm'
 // export const dynamic = 'force-dynamic'
 
 export async function GET(
-  request: Request,
-  { params }: { params: { id: any } }
+  request: NextRequest,
+  { params }: { params: Promise<{ id: any }> }
 ) {
   try {
-    const id = params.id
+    const {id} = await params
 
     const issue = await db.query.issues.findFirst({
       where: eq(issues.id, id),
